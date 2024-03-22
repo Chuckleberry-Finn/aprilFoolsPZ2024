@@ -5,16 +5,6 @@ if not osDate then return end
 local eventOver = false
 if osDate.month>=4 and osDate.day>=1 then eventOver = true end
 
----@class FIXIFIER : ISPanel
-local FIXIFIER = ISPanel:derive("FIXIFIER")
-function FIXIFIER:new(x, y, w, h)
-    local o = ISPanel:new(x-2, y-2, w, h)
-    setmetatable(o, self)
-    self.__index = self
-    FIXIFIER:setUIName("FIXIFIER")
-    return o
-end
-
 local errorPopUps = -100
 local errorPopUpsXY = {}
 
@@ -39,18 +29,19 @@ local function fix()
 
     if not ui then
         ---@type ISUIElement
-        local newUI = FIXIFIER:new(x, y, w, h)
+        local newUI = ISPanel:new(x, y, w, h)
         newUI:initialise()
         newUI:addToUIManager()
+        newUI.backgroundColor = {r=0, g=0, b=0, a=0}
+        newUI.borderColor = {r=0, g=0, b=0, a=0}
+        newUI:setX(x)
+        newUI:setY(y)
+        newUI:setWidth(w)
+        newUI:setHeight(h)
         ui = newUI:getJavaObject()
 
         playerData.fixifierUI = ui
     else
-        ui:setX(x)
-        ui:setY(y)
-        ui:setWidth(w)
-        ui:setHeight(h)
-
         local errors = getLuaDebuggerErrors()
         if errors:size() > 0 then errorPopUps = errorPopUps + 1 end
     end

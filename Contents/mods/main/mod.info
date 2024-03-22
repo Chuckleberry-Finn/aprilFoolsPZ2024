@@ -1,6 +1,6 @@
-id=ChuckTemplate
-name=ChuckTemplate
-description= 
+id=ErrorFixifier
+name=Error Fixifier
+description=
 poster=poster.png
 tags=Build 41
 versionMin=41.0

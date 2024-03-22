@@ -1,12 +1,21 @@
 version=1
 title=Error Fixifier
-description=[h2]Hey Vern, this mod fixes all errors. No More Errors. Knowhutimean?[/h2]
 description=
 description=[url=https://ko-fi.com/chuckleberryfinn][img]https://raw.githubusercontent.com/ChuckTheSheep/chuckImages/main/kofi.png[/img][/url][url=https://discord.gg/SReMnbV4V7][img]https://raw.githubusercontent.com/Chuckleberry-Finn/chuckImages/main/PZmodCommBanner3.png[/img][/url]
 description=
-description=[url=https://raw.githubusercontent.com/Chuckleberry-Finn/chuckImages/main/bingo.png][img]https://raw.githubusercontent.com/Chuckleberry-Finn/chuckImages/main/readThrough.png[/img][/url]
-description=[img]https://raw.githubusercontent.com/Chuckleberry-Finn/chuckImages/main/noModPacks.png[/img]
+description=[h2]Ladies and gentlemen, gather 'round, for I bring tidings of a revolution in the realm of gaming! Ernest P. Worell, at your service, here to unveil my latest creation: the one, the only, the game-changer - the Error Fixifier mod!
 description=
+description=Now, I know what you're thinking. "Ernest, old chap, what's all this hullabaloo about error fixin'?" Well, let me tell you, my dear friends, this isn't just any ol' fix. No siree! This is the ultimate solution to those pesky error popups that haunt your gaming experience like an unwanted specter.
+description=
+description=Picture this: You're knee-deep in the trenches of your favorite game, fighting off hordes of undead or traversing vast, open worlds, when suddenly, out of the blue, bam! - an error message rears its ugly head, threatening to derail your epic adventure. But fear not, for with the power of the Error Fixifier, those annoyances are a thing of the past!
+description=
+description=No longer will you be held captive by the shackles of technical glitches and coding mishaps. With just a simple installation of my mod, your gaming escapades will be smoother than a freshly buttered biscuit on a Sunday mornin'!
+description=
+description=I've poured my heart and soul into perfecting this marvel of modern technology. Countless hours of tinkering, testing, and tweaking have culminated in a masterpiece that guarantees to banish errors to the darkest depths of digital oblivion.
+description=
+description=So, fellow gamers, heed my words and rejoice! Embrace the dawn of a new era in gaming, where errors are but a distant memory, and nothing stands between you and the immersive, uninterrupted bliss of virtual worlds.
+description=
+description=The Error Fixifier mod - because in the game of life, there's no room for errors! Knowhutimean?[/h2]
 description=
 description=
 description=[h3]Copyright 2024 Chuckleberry Finn. This item is not authorized for posting on Steam, except under the Steam account named Chuckleberry Finn.[/h3]

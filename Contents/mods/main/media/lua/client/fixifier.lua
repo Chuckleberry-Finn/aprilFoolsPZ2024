@@ -107,10 +107,6 @@ local function fix()
             ernestX = eX
             ernestY = eY
 
-            getRenderer():renderi(nil, 0, eY+30, sW, ernestH, 0.0, 0.0, 0.0, 0.8, nil)
-
-            getRenderer():renderi(ernest, eX, eY, ernestW, ernestH, 1.0, 1.0, 1.0, 1.0, nil)
-
             local msg = {"Well, would you look at that! Seems like all them errors we've been keepin' under wraps have sprung a leak!",
                          "But fear not, my friends, 'cause this Spiffo’s got just the solution. You see this face right here?",
                          "Well, I have some trusty ductape under my hat.",
@@ -118,8 +114,12 @@ local function fix()
                          "Just give my face a nice solid CLICK and HOLD that click, and we'll patch up them leaks quicker than quick!",
                          "So, let's roll up our sleeves and get to holdin', 'cause ain't no leak gonna dampen our spirits today!",
                          " ",
-                         "Thanks for being a good sport, happy April Fools, and remember there's no cure-alls in life.",
+                         "Thanks for being a good sport, happy April-Fools, and remember there's no cure-alls in life.",
+                         "Now, go tell all your friends to try this mod out!",
             }
+
+            getRenderer():renderi(nil, 0, eY+(ernestH/5)-(largeTextH/2), sW, largeTextH*(#msg+1), 0.0, 0.0, 0.0, 0.8, nil)
+            getRenderer():renderi(ernest, eX, eY+(ernestH/5), ernestW, ernestH, 1.0, 1.0, 1.0, 1.0, nil)
 
             for i,m in pairs(msg) do
                 getTextManager():DrawString(UIFont.Large, eX+(ernestW*1.20), eY+(ernestH/5)+((largeTextH)*(i-1)), m, 1.0, 1.0, 1.0, 1.0)

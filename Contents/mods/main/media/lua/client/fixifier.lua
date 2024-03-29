@@ -28,24 +28,21 @@ local function clickerUp(x, y) heldDownFace = false end
 Events.OnMouseUp.Add(clickerUp)
 Events.OnRightMouseUp.Add(clickerUp)
 
+---@type UIElement
+fixifierUI = nil
+
 ---What you can't see can't hurt you.
 local function fix()
 
-    local playerData = getPlayer() and getPlayerData(getPlayer():getPlayerNum())
-    if not playerData then return end
-
-    ---@type UIElement
-    local ui = playerData and playerData.fixifierUI
-
-    local w = 100
-    local h = (debugTextH * 2 + 4)
+    local w = 106
+    local h = ((debugTextH * 2) + 10)
 
     local sW = getCore():getScreenWidth()
     local x = sW - w
     local sH = getCore():getScreenHeight()
     local y = sH - h
 
-    if not ui then
+    if not fixifierUI then
         ---@type ISUIElement
         local newUI = ISPanel:new(x, y, w, h)
         newUI:initialise()
@@ -56,12 +53,13 @@ local function fix()
         newUI:setY(y)
         newUI:setWidth(w)
         newUI:setHeight(h)
-        ui = newUI:getJavaObject()
-
-        playerData.fixifierUI = ui
+        newUI.ui = newUI:getJavaObject()
+        newUI.ui:setConsumeMouseEvents(false)
+        newUI:backMost()
+        fixifierUI = newUI
     end
 
-    if not ui then return end
+    if not fixifierUI then return end
 
     if not gagOver then
         local reader = getFileReader("aprilFools2024.txt", false)
@@ -128,7 +126,18 @@ local function fix()
         end
     end
 
-    ui:setStencilRect(x, y, w , h)
+    fixifierUI.ui:setStencilRect(x, y, w , h)
+    if not isIngameState() then fixifierUI.ui:clearStencilRect() end
 end
 
 Events.OnPostUIDraw.Add(fix)
+
+--[[
+local function clear()
+    if fixifierUI then
+        fixifierUI.ui:removeFromUIManager()
+        fixifierUI = nil
+    end
+end
+Events.OnMainMenuEnter.Add(clear)
+--]]

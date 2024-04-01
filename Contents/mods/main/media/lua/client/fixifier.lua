@@ -71,7 +71,7 @@ local function fix()
         end
     end
 
-    if engageEvent and (not gagOver) then
+    if engageEvent and (not gagOver) and (MainScreen and MainScreen.instance and MainScreen.instance.inGame) then
 
         if Mouse and #errorPopUpsXY>0 then
             local mx, my = Mouse:getX(), Mouse:getY()

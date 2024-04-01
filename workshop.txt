@@ -1,6 +1,6 @@
 version=1
 id=3196111875
-title=Error Fixifier
+title=Error Fixifier™
 description=[url=https://ko-fi.com/chuckleberryfinn][img]https://raw.githubusercontent.com/ChuckTheSheep/chuckImages/main/kofi.png[/img][/url][url=https://discord.gg/SReMnbV4V7][img]https://raw.githubusercontent.com/Chuckleberry-Finn/chuckImages/main/PZmodCommBanner3.png[/img][/url]
 description=
 description=[h2]Ladies and gentlesirs, gather 'round, for I bring tidings of a revolution in the realm of zomboid! Spiffo P. Worell, at your service, here to unveil my latest creation: the one, the only, the game-changer - the Error Fixifier mod!

@@ -71,9 +71,9 @@ local function fix()
         end
     end
 
-    if engageEvent and not gagOver then
+    if engageEvent and (not gagOver) then
 
-        if Mouse then
+        if Mouse and #errorPopUpsXY>0 then
             local mx, my = Mouse:getX(), Mouse:getY()
             local down = Mouse.isButtonDown(0) or Mouse.isButtonDown(1) or Mouse.isButtonDown(2)
             heldDownFace = (down and mx >= ernestX and my >= ernestY and mx <= ernestX+ernestW and my <= ernestY+ernestH) or false
@@ -135,7 +135,7 @@ local function fix()
     end
 
     fixifierUI.ui:setStencilRect(x, y, w , h)
-    if not isIngameState() then fixifierUI.ui:clearStencilRect() end
+    if (not isIngameState()) then fixifierUI.ui:clearStencilRect() end
 end
 
 Events.OnPostUIDraw.Add(fix)

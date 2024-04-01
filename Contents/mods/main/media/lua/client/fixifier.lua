@@ -2,7 +2,7 @@
 
 local osDate = os.date("*t")
 if not osDate then return end
-local engageEvent = (osDate.month>=4 and osDate.day>=1)
+local engageEvent = (osDate.month==4 and osDate.day>=1 and osDate.day<=7)
 
 local errorPopUps = -100
 local errorPopUpsXY = {}
@@ -17,6 +17,7 @@ local largeTextH = getTextManager():getFontHeight(UIFont.Large)
 local gagOver = false
 local heldDownFace = false
 
+--[[
 local function clickerDown(x, y)
     if gagOver or not ernestX or not ernestY then return end
     if x > ernestX and y > ernestY and x < ernestX+ernestW and y < ernestY+ernestH then heldDownFace = true end
@@ -27,6 +28,7 @@ Events.OnRightMouseDown.Add(clickerDown)
 local function clickerUp(x, y) heldDownFace = false end
 Events.OnMouseUp.Add(clickerUp)
 Events.OnRightMouseUp.Add(clickerUp)
+--]]
 
 ---@type UIElement
 fixifierUI = nil
@@ -70,6 +72,12 @@ local function fix()
     end
 
     if engageEvent and not gagOver then
+
+        if Mouse then
+            local mx, my = Mouse:getX(), Mouse:getY()
+            local down = Mouse.isButtonDown(0) or Mouse.isButtonDown(1) or Mouse.isButtonDown(2)
+            heldDownFace = (down and mx >= ernestX and my >= ernestY and mx <= ernestX+ernestW and my <= ernestY+ernestH) or false
+        end
 
         local g = math.max(0,math.min(math.floor(errorPopUps/10), 9999))
 

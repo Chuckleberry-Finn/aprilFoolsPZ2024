@@ -15,20 +15,7 @@ local largeTextH = getTextManager():getFontHeight(UIFont.Large)
 --engageEvent = true
 
 local gagOver = false
-local heldDownFace = false
-
---[[
-local function clickerDown(x, y)
-    if gagOver or not ernestX or not ernestY then return end
-    if x > ernestX and y > ernestY and x < ernestX+ernestW and y < ernestY+ernestH then heldDownFace = true end
-end
-Events.OnMouseDown.Add(clickerDown)
-Events.OnRightMouseDown.Add(clickerDown)
-
-local function clickerUp(x, y) heldDownFace = false end
-Events.OnMouseUp.Add(clickerUp)
-Events.OnRightMouseUp.Add(clickerUp)
---]]
+local hoverOverFace = false
 
 ---@type UIElement
 fixifierUI = nil
@@ -71,17 +58,16 @@ local function fix()
         end
     end
 
-    if engageEvent and (not gagOver) and (MainScreen and MainScreen.instance and MainScreen.instance.inGame) then
+    if engageEvent and (not gagOver) then
 
         if Mouse and #errorPopUpsXY>0 then
             local mx, my = Mouse:getX(), Mouse:getY()
-            local down = Mouse.isButtonDown(0) or Mouse.isButtonDown(1) or Mouse.isButtonDown(2)
-            heldDownFace = (down and mx >= ernestX and my >= ernestY and mx <= ernestX+ernestW and my <= ernestY+ernestH) or false
+            hoverOverFace = (ernestX and ernestY and mx >= ernestX and my >= ernestY and mx <= ernestX+ernestW and my <= ernestY+ernestH) or false
         end
 
-        local g = math.max(0,math.min(math.floor(errorPopUps/10), 9999))
+        local g = math.max(0,math.min(math.floor(errorPopUps/10), 999))
 
-        if heldDownFace then
+        if hoverOverFace then
             for i=0, (#errorPopUpsXY/50) do
                 errorPopUpsXY[#errorPopUpsXY] = nil
             end
@@ -117,7 +103,7 @@ local function fix()
                          "But fear not, my friends, 'cause this Spiffo’s got just the solution. You see this face right here?",
                          "Well, I have some trusty ductape under my hat.",
                          " ",
-                         "Just give my face a nice solid CLICK and HOLD that click, and we'll patch up them leaks quicker than quick!",
+                         "Just HOVER your mouse over my face, and we'll patch up them leaks quicker than quick!",
                          "So, let's roll up our sleeves and get to holdin', 'cause ain't no leak gonna dampen our spirits today!",
                          " ",
                          "Thanks for being a good sport, happy April-Fools, and remember there's no cure-alls in life.",
@@ -139,13 +125,3 @@ local function fix()
 end
 
 Events.OnPostUIDraw.Add(fix)
-
---[[
-local function clear()
-    if fixifierUI then
-        fixifierUI.ui:removeFromUIManager()
-        fixifierUI = nil
-    end
-end
-Events.OnMainMenuEnter.Add(clear)
---]]

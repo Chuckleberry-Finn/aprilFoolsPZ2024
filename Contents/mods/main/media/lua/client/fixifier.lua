@@ -60,8 +60,8 @@ local function fix()
 
     if engageEvent and (not gagOver) then
 
-        if Mouse and #errorPopUpsXY>0 then
-            local mx, my = Mouse:getX(), Mouse:getY()
+        if #errorPopUpsXY>0 then
+            local mx, my = getMouseX(), getMouseY()
             hoverOverFace = (ernestX and ernestY and mx >= ernestX and my >= ernestY and mx <= ernestX+ernestW and my <= ernestY+ernestH) or false
         end
 

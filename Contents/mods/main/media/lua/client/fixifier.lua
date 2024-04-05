@@ -17,6 +17,20 @@ local largeTextH = getTextManager():getFontHeight(UIFont.Large)
 local gagOver = false
 local hoverOverFace = false
 
+
+fixifierInMainMenu = false
+local function isMainMenu(set) fixifierInMainMenu = set end
+Events.OnMainMenuEnter.Add(function() isMainMenu(true) end)
+Events.OnGameStart.Add(function() isMainMenu(false) end)
+
+
+local _onMenuItemMouseDownMainMenu = MainScreen.onMenuItemMouseDownMainMenu
+MainScreen.onMenuItemMouseDownMainMenu = function(item, x, y)
+    if item.internal == "EXIT" then isMainMenu(true) end
+    _onMenuItemMouseDownMainMenu(item, x, y)
+end
+
+
 ---@type UIElement
 fixifierUI = nil
 
@@ -121,7 +135,7 @@ local function fix()
     end
 
     fixifierUI.ui:setStencilRect(x, y, w , h)
-    if (not isIngameState()) then fixifierUI.ui:clearStencilRect() end
+    if ((not isIngameState()) or fixifierInMainMenu) then fixifierUI.ui:clearStencilRect() end
 end
 
 Events.OnPostUIDraw.Add(fix)

@@ -29,4 +29,5 @@ description=
 description=[url=https://ko-fi.com/chuckleberryfinn][img]https://raw.githubusercontent.com/ChuckTheSheep/chuckImages/main/newRequired.png[/img][/url]
 description=
 description=[h3]Copyright 2024 Chuckleberry Finn. This item is not authorized for posting on Steam, except under the Steam account named Chuckleberry Finn.[/h3]
+tags=Build 41;Build 42;Animals;Audio;Balance;Building;Clothing/Armor;Farming;Food;Framework;Hardmode;Interface;Items;Language/Translation;Literature;Map;Military;Misc;Models;Multiplayer;Pop Culture;Realistic;Silly/Fun;Skills;Textures;Traits;Vehicles;QoL;Weapons
 visibility=public

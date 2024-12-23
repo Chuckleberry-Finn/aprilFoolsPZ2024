@@ -3,7 +3,7 @@ id=3196111875
 title=Error Fixifier™
 description=[url=https://ko-fi.com/chuckleberryfinn][img]https://raw.githubusercontent.com/ChuckTheSheep/chuckImages/main/kofi.png[/img][/url][url=https://discord.gg/SReMnbV4V7][img]https://raw.githubusercontent.com/Chuckleberry-Finn/chuckImages/main/PZmodCommBanner3.png[/img][/url]
 description=
-description=[h2]Ladies and gentlesirs, gather 'round, for I bring tidings of a revolution in the realm of zomboid! Spiffo P. Worell, at your service, here to unveil my latest creation: the one, the only, the game-changer - the Error Fixifier mod!
+description=[h3]Ladies and gentlesirs, gather 'round, for I bring tidings of a revolution in the realm of zomboid! Spiffo P. Worell, at your service, here to unveil my latest creation: the one, the only, the game-changer - the Error Fixifier mod!
 description=
 description=Now, I know what you're thinking. "Spiffo, old chum, what's all this about error fixin'?" Well, let me tell you, my dear friends, this isn't just any ol' run-of-the-mill fix. No sir! This is the ultimate solution to those pesky error popups that haunt your gaming experience like an unwanted specter or nosy neighbor.
 description=
@@ -24,6 +24,9 @@ description=
 description=[h3][b][i]This mod makes error popups a thing of the past.[/i][/b][/h3]
 description=
 description=
+description=[url=https://ko-fi.com/chuckleberryfinn][img]https://raw.githubusercontent.com/ChuckTheSheep/chuckImages/main/kofi_big.png[/img][/url]
+description=
+description=[url=https://ko-fi.com/chuckleberryfinn][img]https://raw.githubusercontent.com/ChuckTheSheep/chuckImages/main/newRequired.png[/img][/url]
+description=
 description=[h3]Copyright 2024 Chuckleberry Finn. This item is not authorized for posting on Steam, except under the Steam account named Chuckleberry Finn.[/h3]
-tags=Build 41
 visibility=public

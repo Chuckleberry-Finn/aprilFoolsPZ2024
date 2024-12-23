@@ -3,6 +3,7 @@
 local osDate = os.date("*t")
 if not osDate then return end
 local engageEvent = (osDate.month==4 and osDate.day>=1 and osDate.day<=7)
+local yearOfOurLawd = osDate.year
 
 local errorPopUps = -100
 local errorPopUpsXY = {}
@@ -65,7 +66,7 @@ local function fix()
     if not fixifierUI then return end
 
     if not gagOver then
-        local reader = getFileReader("aprilFools2024.txt", false)
+        local reader = getFileReader("aprilFools"..yearOfOurLawd..".txt", false)
         if reader then
             gagOver = true
             reader:close()
@@ -87,7 +88,7 @@ local function fix()
             end
 
             if #errorPopUpsXY <= 0 then
-                local writer = getFileWriter("aprilFools2024.txt", true, false)
+                local writer = getFileWriter("aprilFools"..yearOfOurLawd..".txt", true, false)
                 writer:write("Fooled Ya! delete This file to re-enable the gag.")
                 writer:close()
             end

@@ -23,6 +23,7 @@ description=[h2][b][i]This mod makes error popups a thing of the past.[/i][/b][/
 description=
 description=[h3][b][i]This mod makes error popups a thing of the past.[/i][/b][/h3]
 description=
+description=[url=https://chuckleberry-finn.github.io/issues/][img]https://raw.githubusercontent.com/Chuckleberry-Finn/chuckImages/main/bugHunt.png[/img][/url]
 description=
 description=[url=https://ko-fi.com/chuckleberryfinn][img]https://raw.githubusercontent.com/ChuckTheSheep/chuckImages/main/kofi_big.png[/img][/url]
 description=
